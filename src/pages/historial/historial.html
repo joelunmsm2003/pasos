@@ -1,0 +1,58 @@
+<ion-header>
+    <ion-toolbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>Mis Reservas</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content >
+
+
+
+  <ion-item-sliding>
+    
+    <ion-item *ngFor="let item of servicios" >
+      <ion-avatar item-start>
+        <img src="{{item.socia__photo}}">
+      </ion-avatar>
+
+      <ion-row>
+      <ion-col col-6 (click)='iradetalle(item)'> {{item.socia__nombre| slice:0:14}} </ion-col>
+      <ion-col col-4 (click)='iradetalle(item)'>
+        
+        {{item.fecha}} {{item.fecha_inicio}}
+
+
+      </ion-col>
+
+      <ion-col col-2 (click)='confirmaeliminacion(item)'>
+        
+        <ion-icon style=' float:right;' name="trash" ></ion-icon>
+
+        
+    
+
+      </ion-col>
+
+
+      </ion-row>
+
+     
+
+
+     
+
+    
+    </ion-item>
+ 
+  </ion-item-sliding>
+
+
+
+
+</ion-content>
+
+<!-- <mytabs></mytabs> -->

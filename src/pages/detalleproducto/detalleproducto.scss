@@ -1,0 +1,49 @@
+page-detalleproducto {
+        //margin-top: 50%
+
+        .item-md ion-avatar img {
+    width: 60px !important;
+    height: 60px !important;
+}
+
+            .titulo{
+
+    position: absolute;
+    top: 20px;
+    /* text-align: center; */
+    font-family: "Nunito";
+    color: #fff;
+    background: #feab2c;
+    font-size: 36px;
+    padding: 8px;
+    border-radius: 45px;
+    opacity: 0.8;
+    right: 21px;
+    }
+
+
+
+        font-family: 'Nunito';
+
+         .tachar{text-decoration:line-through;}
+
+
+
+         .socia{
+
+         	background: url(/assets/fondo.png) no-repeat center center;
+
+         	padding: 15px;
+         	//background: #123;
+         }
+
+         .escogido{
+
+         	background: url(/assets/fondo.png) no-repeat center center;
+
+         	height: 103px;
+
+
+         }
+
+}

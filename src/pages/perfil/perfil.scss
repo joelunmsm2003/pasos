@@ -1,0 +1,55 @@
+page-perfil {
+
+	.fondito{
+
+		//background-image: url("https://www.standard.co.uk/s3fs-public/styles/hero_tablet/public/thumbnails/image/2017/10/25/15/an-132995333.jpg");
+
+   	 	
+	}
+
+
+	$primario:#000;
+	$secundario:#fff;
+
+
+	.profile-menu {
+	img {
+		border-radius: 50%;
+		max-width: 251px;
+	}
+	
+}
+
+
+
+.spacer {
+       
+
+
+  
+}
+
+ .perfil{
+    top: -70px;
+    
+    text-align: center;
+    padding: 8em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background: #222;
+		}
+	
+.side-menu {
+	background: none;
+	color: white;
+	border: 0px;
+	.item-content {
+		background: none;
+		&.activated {
+			background: rgba(255,255,255,0.4);
+		}
+		
+	}
+}
+
+}

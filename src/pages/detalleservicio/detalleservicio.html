@@ -1,0 +1,199 @@
+
+ <ion-header>
+
+  <ion-navbar color="dark">
+    <ion-title>Resumen de tu pedido</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content >
+
+
+
+
+<ion-list>
+
+
+  <ion-toolbar style='text-align: center;'>
+  
+<button ion-button round style='background: #25d366;'><a style='color: #fff;
+    text-decoration: none;' href="https://api.whatsapp.com/send?phone=51910759370&text=Hola%20soy%20{{nombre}}%20me%20gustaría%20reservar%20una%20cita%20para%20el%20{{dia}}%20a%20las%20{{hora}}%20{{todoservicio}}%20code:#%20{{codigo_servicio}}"> Whatsapp <ion-icon name="logo-whatsapp" style='color: #fff;'></ion-icon></a></button>
+
+
+  <button ion-button round color="light"><a style='text-decoration: none;color: #fff;' href="tel:+910759370"> Llamar <ion-icon name="call" style='color: #fff;'></ion-icon></a></button>
+  
+</ion-toolbar>
+
+
+<ion-item >
+  
+   Codigo Servicio <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{codigo_servicio}}</span>
+
+</ion-item>
+
+<ion-item >
+  
+   Estado <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{estado}}</span>
+
+</ion-item>
+
+        
+
+  <ion-item ion-item *ngFor="let item of ped" >
+
+     <ion-thumbnail item-start>
+      <img style='border-radius:50%;' src='{{host}}{{item.socia__photo}}'>
+    </ion-thumbnail>
+
+    <ion-row>
+
+      <h6>{{item.socia__nombre}}</h6>
+    </ion-row>
+
+    <ion-row>
+      <h6>{{item.subcategoria__nombre}}</h6>
+     <!--  
+    <button ion-button color="light" (click)='detalleModal(item)'>  {{item.escogido.socia__nombre}} &nbsp; <ion-icon name="play"></ion-icon>   </button>
+   --></ion-row>
+
+<!--     <ion-icon name="ios-remove-circle-outline" style='padding-right: 4px;' [hidden]="!item.muestradescripcion" (click)='item.muestradescripcion=false'></ion-icon>
+
+    <ion-icon name="ios-add-circle-outline" style='padding-right: 3px;' [hidden]="item.muestradescripcion" (click)='item.muestradescripcion=true'></ion-icon>
+ -->
+
+
+
+    <ion-row>
+
+    <span> {{item.cantidad}} {{item.nombre | slice:0:25}} </span>
+     </ion-row>
+    
+     <ion-row>
+       <span style='float: right;
+    margin-right: -30px;;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;
+'>S/. {{item.precio_con_descuento.toFixed(2)}}</span> 
+
+</ion-row>
+  </ion-item>
+
+
+
+
+
+
+<ion-item >
+  
+   Total a pagar S/. <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'>S/. {{precio}} </span>
+
+</ion-item>
+
+
+<ion-item *ngIf='precio_promo'>
+  
+ 
+   Precio Promocional <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'>S/. {{precio_promo.toFixed(2)}} </span>
+
+</ion-item>
+
+
+<ion-item >
+
+   
+   Fecha: 
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'>{{fecha}} </span>
+ 
+</ion-item>
+
+<ion-item>
+   
+   Hora: 
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{fecha_inicio}}</span>
+   
+</ion-item>
+
+
+<ion-item>
+<ion-label>Direccion</ion-label>
+<ion-textarea [attr.rows]="3" name="direccion" disabled type="text" [(ngModel)]="referencia"  ></ion-textarea>
+</ion-item>
+
+
+</ion-list>
+
+
+
+
+
+
+
+
+
+
+</ion-content> 
+
+
+<ion-footer>
+  <ion-toolbar style='text-align: center;'>
+  
+<button   ion-button round full color="light" round (click)='alertaPago()'>Pagar</button>
+
+
+
+  <!-- 
+
+
+<button  *ngIf="estado=='Pendiente'"  ion-button color="light" round (click)='confirmapago()'>Pago en Efectivo</button>
+
+
+<button   *ngIf="estado=='Pendiente'" ion-button color="dark" round (click)='pagotarjetaToast()'>Pago Tarjeta</button>
+
+
+<button   ion-button color="dark" round (click)='cancelar(ped)'>Cancelar</button>
+
+
+
+<ion-grid *ngIf="estado=='Pendiente'">
+  <ion-row>
+    <ion-col >
+    <img style='width: 112px;
+    height: 42px;
+    border-radius: 59px;' (click)='pagotulki()' src='assets/tunki.png'>
+
+    </ion-col>
+    <ion-col>
+      <img style='width: 112px;
+    height: 42px;
+    border-radius: 59px;' (click)='pagotarjetaToast()' src='assets/boton-yape.png'></ion-col>
+
+   
+  </ion-row>
+</ion-grid> -->
+
+
+  </ion-toolbar>
+</ion-footer>
+

@@ -1,0 +1,53 @@
+Logeado...<h1>{{logeado}}</h1>
+
+<div  class="fixed44" *ngIf="logeado">
+
+ <div class="tab_container">
+      <input id="tab1" type="radio" name="tabs" (click)='home()' >
+
+
+      <label (click)='home()'  for="tab1"><ion-icon name="home"></ion-icon>
+      <span>Home</span></label>
+
+ 
+
+      <input id="tab2" type="radio" name="tabs" (click)='perfil()'>
+      <label [navPush]="perfilPage" for="tab2" ><ion-icon name="person"></ion-icon><span>Perfil</span></label>
+
+      <input id="tab3" type="radio" name="tabs" (click)='historial()'>
+      <label [navPush]="historialPage" for="tab3"><ion-icon name="keypad"></ion-icon><span>Servicios</span></label>
+
+       <input (click)='salircliente()' id="tab4" type="radio" name="tabs" >
+      <label   for="tab4"><ion-icon name="log-out"></ion-icon><span>Salir</span></label>
+
+
+
+</div>
+
+</div>
+
+<div  class="fixed44" *ngIf="nologeado">
+
+ <div class="tab_container">
+      <input id="tab1" type="radio" name="tabs"  >
+
+
+      <label  (click)='home()' for="tab1"><ion-icon name="home"></ion-icon>
+      <span>Home</span></label>
+
+ 
+
+      <input id="tab2" type="radio" name="tabs" >
+      <label (click)="ayuda()" for="tab2" ><ion-icon name="help"></ion-icon><span>Ayuda</span></label>
+
+      <input id="tab3" type="radio" name="tabs" >
+      <label (click)="shareSheetShare()" for="tab3"><ion-icon name="share"></ion-icon><span>Compartir</span></label>
+
+       <input id="tab4" type="radio" name="tabs" >
+      <label  (click)="loginprincipal()" for="tab4"><ion-icon name="log-in"></ion-icon><span>Ingresar</span></label>
+
+
+
+</div>
+
+</div>

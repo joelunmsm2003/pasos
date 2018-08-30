@@ -1,0 +1,89 @@
+
+<ion-header>
+		<ion-toolbar color='dark'>
+		<button ion-button menuToggle>
+			<ion-icon name="menu"></ion-icon>
+		</button>
+			<ion-title>Perfil</ion-title>
+		</ion-toolbar>
+	</ion-header>
+
+
+
+<ion-content >
+<div class="spacer">
+	
+
+
+</div>
+
+
+
+<!-- 	<div style='background: #000;
+		color: #fff;
+		font-family: Varela Round;
+		padding: 12px;
+		text-align: center;'>
+
+	 	<h5>Ingrese un codigo de promocional si lo tienes</h5>
+ 
+
+	<img  *ngIf='photo_facebook'  src="{{photo_facebook}}" style='clear: left;border: 2px solid #fff;'>
+
+	<img  *ngIf='photo'  src="{{host}}{{photo}}" style=' clear: left;border: 2px solid #fff;'>
+
+ 
+	</div>
+ -->
+			<!-- <div class="profile-menu">
+				<img src="{{host}}/{{photo}}" style="display: block; width: 60%; height: auto; margin-left: auto; margin-right: auto;">
+			</div> -->
+		
+
+
+
+<ion-list padding>
+
+	<!-- <ion-item>
+		<ion-label fixed>Codigo</ion-label>
+		<ion-input type="text" [(ngModel)]="codigo"></ion-input>
+	</ion-item>
+	 -->
+	<ion-item>
+		<ion-label fixed>Nombre</ion-label>
+		<ion-input type="text" value="" [(ngModel)]="nombre"></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label fixed>Email</ion-label>
+		<ion-input type="text" [(ngModel)]="email"></ion-input>
+	</ion-item>
+
+	<ion-item>
+		<ion-label fixed>Teléfono</ion-label>
+		<ion-input type="text" [(ngModel)]="telefono"></ion-input>
+	</ion-item> 
+
+ 
+
+
+
+
+	 
+ <button ion-button full round color="dark" (click)="actualiza(nombre,email,telefono,codigo)">Guardar</button>
+ 
+
+</ion-list>
+
+
+
+
+
+
+
+
+</ion-content>
+
+<!-- 
+<mytabs></mytabs>
+ -->

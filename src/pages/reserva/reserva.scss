@@ -1,0 +1,72 @@
+page-reserva {
+
+
+
+ 
+
+    .alert-button{
+
+
+      height: 4em !important;
+          height: 56px !important;
+    margin-bottom: 12px !important;
+
+    
+    }
+
+
+.alert-title{
+    
+
+    line-height:20px
+}
+
+    ion-label{
+
+        white-space: normal !important;
+    }
+
+       .content-md {
+    color: #000;
+    font-size: 5px;
+    background-color: #fff;
+    //background: url(https://mylookxpressapp.com:2500/static/WhatsApp_Image_2018-01-04_at_16.34.38_1.jpeg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-size:8px !important;
+}
+
+.list-md {
+    margin: -1px 0 0px !important;
+}
+
+
+}
+
+.circulo{
+        align-items: center;
+    justify-content: center;
+    background-color: #000;
+    color: white;
+    width: 3em;
+    border-radius: 50%;
+    vertical-align: middle;
+    height: 3em;
+    padding: 11px;
+    font-size: 13px;
+    padding-left: 17px;
+  }
+  .circulo,h4{
+    display: inline-block;
+  }
+
+
+#mapita{ background-color: rgba(0,0,0,0) !important }
+
+
+ion-app._gmaps_cdv_ .nav-decor{
+background-color: transparent !important;
+
+}

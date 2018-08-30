@@ -1,0 +1,13 @@
+{
+  "name": "My Look Xpress",
+  "short_name": "My Look Xpress",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/imgs/logo.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#bbc9cd",
+  "theme_color": "#bbc9cd"
+}

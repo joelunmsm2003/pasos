@@ -1,0 +1,120 @@
+
+ <ion-header>
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>My Look Xpress</ion-title>
+
+      
+<ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            '>{{book}}</ion-badge> 
+
+      <ion-buttons *ngIf='book>0' end>
+      <button end ion-button (click)="carritoModal()">
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+
+    
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+
+
+
+
+<ion-slides *ngIf="photo1" autoplay="2000"  speed="4000" pager paginationType='bullets'>
+
+
+  <ion-slide ng-click='iradetalle(1)'>
+
+    <img src="{{host}}{{photo1}}" alt="">
+  </ion-slide>
+
+  <ion-slide ng-click='iradetalle(2)'>
+    <img src="{{host}}{{photo2}}" alt="">
+  </ion-slide>
+
+
+  <ion-slide ng-click='iradetalle(3)'>
+    <img src="{{host}}{{photo3}}" alt="">
+  </ion-slide>
+
+  <ion-slide ng-click='iradetalle(4)'>
+    <img src="{{host}}{{photo4}}" alt="">
+  </ion-slide>
+
+</ion-slides >
+
+
+<ion-slides *ngIf="photo5" effect='fade' autoplay="2000"  speed="3000" style='margin-top: -2px;'>
+
+
+  <ion-slide>
+
+    <a href='{{link5}}'>
+    <img src="{{host}}{{photo5}}" alt="">
+    </a>
+
+  </ion-slide>
+  <ion-slide>
+
+    <a href='{{link6}}'>
+    <img src="{{host}}{{photo6}}" alt="">
+    </a>
+
+  </ion-slide>
+  <ion-slide>
+    <a href='{{link7}}'>
+    <img src="{{host}}{{photo7}}" alt="">
+    </a>
+  </ion-slide>
+
+  <ion-slide>
+    <a href="{{link8}}">
+    <img src="{{host}}{{photo8}}" alt="">
+    </a>
+  </ion-slide>
+
+</ion-slides>
+
+
+
+
+<div style='margin-top:-2px;'>
+
+
+<div  *ngFor = 'let c of categoria' (click)='iraventas(c)' >
+
+
+
+      <a *ngIf='c.photo'  >
+        <img  src="{{host}}{{c.photo}}"  class='categoriaimagen' >
+         <div class='categoria' style=''>{{c.nombre}}</div>
+      </a>
+
+   
+
+<div style="height:2px;"></div>
+
+ </div>
+
+ </div>
+
+<!-- <div style='height: 50px'></div> 
+ -->
+</ion-content>
+
+
+

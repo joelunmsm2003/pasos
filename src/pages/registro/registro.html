@@ -1,0 +1,174 @@
+<!--
+  Generated template for the RegistroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<!-- <ion-header>
+
+  <ion-navbar color='dark'>
+    <ion-title> Registrate </ion-title>
+
+    <ion-buttons start="" (click)='closeModal()' class="bar-buttons bar-buttons-ios">
+      <button ion-button="" class="disable-hover bar-button bar-button-ios bar-button-default bar-button-default-ios"><span class="button-inner" >Cerrar</span><div class="button-effect"></div></button>
+    </ion-buttons>
+
+  </ion-navbar>
+
+</ion-header>
+
+ -->
+
+
+<ion-content padding style='text-align: center;'>
+
+
+
+
+
+<!-- 
+<div class="app-icon">
+        <ion-icon name="ios-chatbubbles-outline" ></ion-icon>
+      </div> -->
+
+
+   <!--Facebook Login-->
+
+
+<!--   <div *ngIf="isLoggedIn; else facebookLogin">
+ 
+    <p>
+      <button ion-button full icon-right (click)="logout()">
+        Salir
+      </button>
+    </p>
+  </div>
+  <ng-template #facebookLogin>
+    <button ion-button full icon-right (click)="login()">
+      Ingresar con
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+  </ng-template>
+ -->
+ 
+
+
+<div style='height: 20px'></div>
+<h1 class='animated slideInDown' style='font-family: "Lato";font-size:3em;'>COMTACTOS</h1>
+ 
+<!-- <label *ngIf="!telefono" color='light'>Registrate con tu celular</label>
+ -->
+
+
+
+
+  
+<!--        <ion-list inset>
+
+
+      
+
+     
+      <label color='dark'>Correo Electronico</label>
+      <ion-item>
+            <ion-input  formControlName="email"  name='email' id="loginField" type="email" required [(ngModel)] = "user.email"></ion-input>
+      </ion-item>
+
+
+
+      <label color='dark'>Nombre</label>
+      <ion-item>
+            <ion-input formControlName="nombre"  name='nombre' id="loginField" type="text" required [(ngModel)] = "user.nombre"></ion-input>
+      </ion-item>
+
+
+
+      <label color='dark'>Telefono</label>
+      <ion-item>
+            <ion-input formControlName="telefono"  name='telefono' id="loginField" type="text" required [(ngModel)] = "user.telefono"></ion-input>
+      </ion-item>
+
+
+
+      <label color='dark'>Password</label>
+
+
+      <ion-item>
+            <ion-input  formControlName="password" name="password" id="loginField" type="password" required [(ngModel)] = "user.password"></ion-input>
+      </ion-item>
+
+
+      </ion-list>
+
+
+
+      <button round ion-button type="submit" color='dark' block [disabled]="!todo.valid">Registrar</button>
+ -->    
+
+<!-- 
+ <ion-row padding>Si ya tienes cuenta ingresa <span [navPush]="loginPage" style='padding-left: 9px;text-decoration: underline;
+'> AQUI</span></ion-row>
+ -->
+<!-- 
+<button round ion-button  color='white' block  [navPush]="loginPage" >Ingresar</button> -->
+
+  <!--    <button round ion-button  color='white' block  [navPush]="registrosociaPage" >Conviertete en socia</button>-->
+
+
+
+
+<ion-list inset >
+
+
+<label>Si ya estas registrado ingresa tu celular</label>
+
+  <form  (ngSubmit)="ingresar(tel)" [formGroup]="todo">
+<ion-row wrap>
+
+
+<ion-col col-12>
+
+<ion-item>
+<ion-input  round  formControlName="telefono"  placeholder='Ingrese tu número'  name='telefono' type="number" required [(ngModel)] = "tel"></ion-input>
+</ion-item>
+
+</ion-col>
+
+<ion-col col-12>
+<button  ion-button full round block type="submit" color='dark'>Ingresar</button>
+</ion-col>
+</ion-row>
+
+</form>
+
+
+</ion-list>
+
+
+
+
+<ion-list inset >
+<div style='height: 20px;'></div>
+<button  round ion-button type="button" color='light' block [navPush]="registroprincipalPage" ><ion-col col-2><ion-icon name="phone-portrait"></ion-icon> </ion-col><ion-col col-10>Registrate con tu celular </ion-col></button>
+
+
+<div style='height: 20px;'></div>
+
+
+        <div  style='padding: 9px;
+    border-radius: 4em;
+    opacity: 0.8;
+    border: 1px solid #1d2828;'>
+       <a color='dark' class='reportar' style='text-decoration: none;' href="https://api.whatsapp.com/send?phone=51910759370&text=Hola"> Reportar un problema  <ion-icon name="logo-whatsapp" style='color: #25d366;float:right;'></ion-icon></a>
+     </div>
+
+</ion-list>
+
+
+
+</ion-content>
+
+<!-- <mytabs></mytabs>
+
+
+ -->

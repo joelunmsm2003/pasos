@@ -1,0 +1,402 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #fdcb6e,
+  danger:     #f53d3d,
+  light:      #222,
+  dark:       #ffab2c,
+  white:      #fff
+);
+
+$font-default:'Nunito';
+
+ion-footer{
+
+        .toolbar-background-md {
+            border-color: #ffffff !important;
+            background: none !important;
+        }
+}
+    
+    .categoriaimagen{
+        display: block;
+        width: 100%; 
+        height: auto; 
+        margin-left: auto; 
+        margin-right: auto;
+    }
+
+.toast-message{
+
+    font-family: 'Nunito', sans-serif;
+    font-size:14px !important;
+
+}
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+// Slider Menu Cateforias
+.categorias-slider{
+
+      padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    flex-flow: row;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 90px;
+    position: fixed;
+    z-index: 7000;
+
+
+}
+
+ion-app.md [padding] {
+    padding: 16px;
+    //background: #fff !important;
+}
+
+.button-inner{
+    font-family: 'Nunito';
+    font-size: 12px;
+}
+
+.categorias-slider li {
+flex: 1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    font-size: 10px;
+    padding: 8px 8px;
+    min-width: 73px;
+    list-style: none;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    font-family: 'Nunito', sans-serif;
+        background: #f7f7f7;
+}
+
+.picker-md .picker-wrapper {
+    height: 260px;
+    border-top: 0.55px solid #ffffff;
+    background: #ffffff;
+    color: #000;
+
+        font-family: "M PLUS Rounded 1c" !important;
+
+
+}
+
+
+
+ion-title{
+
+	font-family: 'Nunito', sans-serif;
+
+
+}
+
+.input-wrapper {
+
+
+    font-family: "Nunito" !important;
+
+
+}
+
+.picker-md .picker-columns {
+
+    background: #fff;
+
+}
+#mapita{ background-color: rgba(0,0,0,0) }
+
+.alert-md .alert-title {
+    font-size: 14px !important;
+    font-family: 'Nunito', sans-serif;
+}
+
+.alert-md .alert-sub-title {
+    font-size: 14px !important;
+    font-family: 'Nunito', sans-serif;
+    padding-top: 13px !important;
+}
+
+.alert-md .alert-button .button-inner {
+    color:#000;
+}
+
+.card-title-md {
+    display: block;
+    font-size: 16px !important;
+    line-height: 1.2;
+    color: #000;
+    margin: 2px 0;
+    padding: 0px 0px !important;
+}
+
+.card-content-md {
+    padding: 2px 16px !important;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-family: 'Nunito', sans-serif !important;
+}
+
+
+.alertDanger{
+
+
+button{
+
+    text-align: center;
+    background: url(/assets/fondo.png) no-repeat center !important;
+height: 4em; 
+    margin-bottom: 12px !important;
+    text-align: center !important;
+
+}
+   
+.tunki{
+
+    
+    color:#345;
+    background: url(/assets/tunki.png) no-repeat center !important;
+    height: 4em; 
+    margin-bottom: 12px !important;
+    
+}
+
+.yape{
+    
+
+    background: url(/assets/boton-yape.png) no-repeat center !important;
+
+    height: 4em; 
+    margin-bottom: 12px !important;
+    
+}
+
+
+
+}
+
+
+.numero{
+
+    font-family: 'Varela Round'
+}
+
+.sexocss{
+
+
+         .alert-head {
+
+            padding: 14px 24px 10px!important;
+        }
+
+
+
+
+         .alert-radio-group, .alert-md .alert-checkbox-group {
+
+        display: flex;
+        }
+
+
+         .alert-tappable {
+
+        min-height: 12.4rem !important;
+        }
+
+
+
+        
+         .alert-radio-label {
+
+        text-overflow: clip !important;
+
+        }
+
+        [aria-checked=true] .alert-radio-label {
+
+        opacity: 0 !important;
+        }
+
+        .alert-radio-icon {
+
+        opacity: 0 !important;
+        }
+
+        .alert-radio-label {
+
+        opacity: 0;
+        }
+
+        .alert-button-group {
+
+        //justify-content: center !important;
+        padding: 0px !important;
+        //margin: 0 -8px 18px 2px !important;
+        border-radius: 0px;
+        vertical-align:middle;
+        display:inline-block;
+        padding-bottom: 17px !important;
+
+        }
+
+         .alert-button {
+
+        display:inline-block;
+        vertical-align:middle;
+        float: right;
+        width: 45%;
+        background: url(https://mylookxpressapp.com:2500/static/m.png) no-repeat center;
+        background-size: 93px !important;
+        background-color: #222 !important;
+        padding:20px;
+        // margin: 0 4px 1px -2px;
+        // text-align: center !important;
+
+         height: 100px !important;
+        }
+
+        .alert-button-group>button:first-child{
+
+        float: left;
+        display:inline-block;
+        vertical-align:middle;
+        width: 45%;
+        background: url(https://mylookxpressapp.com:2500/static/f.png) no-repeat center;
+
+        background-size: 93px !important;
+        background-color: #222 !important;
+        padding:20px;
+        // margin: 0 4px 1px -2px;
+        // text-align: center !important;
+
+         height: 100px;
+        }
+
+        .alert-head {
+        padding: 24px 24px 10px !important;
+        text-align: center !important;
+        }
+
+        .alert-wrapper {
+
+        background-color: #222222 !important;
+        color: #fff !important;
+
+        }
+
+
+}
+
+
+.alertCustomCss{
+
+   .alert-sub-title{
+
+    line-height: 20px !important;
+
+    }
+            
+
+    
+        // .alert-wrapper {
+
+        // background-color: #222222 !important;
+        // color: #fff !important;
+
+        // }
+
+//        .alert-button .button-inner {
+//     color: #fff;
+// }
+
+}

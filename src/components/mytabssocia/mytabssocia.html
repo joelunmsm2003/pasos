@@ -1,0 +1,23 @@
+<div  class="fixed44" >
+
+ <div class="tab_container">
+      <input id="tab1" type="radio" name="tabs" (click)='home()' >
+
+
+
+ 
+
+      <input id="tab2" type="radio" name="tabs" (click)='perfil()'>
+      <label [navPush]="perfilPage" for="tab2" ><ion-icon name="person"></ion-icon><span>Perfil</span></label>
+
+      <input id="tab3" type="radio" name="tabs" (click)='historial()'>
+      <label [navPush]="historialsociaPage" for="tab3"><ion-icon name="keypad"></ion-icon><span>Servicios</span></label>
+
+       <input (click)='salir()' id="tab4" type="radio" name="tabs" >
+      <label for="tab4"><ion-icon name="log-out"></ion-icon><span>Salir</span></label>
+
+
+
+</div>
+
+</div>

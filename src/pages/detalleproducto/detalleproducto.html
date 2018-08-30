@@ -1,0 +1,175 @@
+<ion-header >
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>{{producto.categoria__nombre}} </ion-title>
+
+
+         <ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            ' >{{book}}</ion-badge> 
+                            
+
+         <ion-buttons end>
+
+
+
+      <button end ion-button (click)="carritoModal()">
+        
+
+
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+    
+
+        
+
+
+    </ion-navbar>
+
+ 
+  </ion-header>
+
+
+<ion-content  >
+
+    <img src="{{host}}{{producto.photo}}">
+
+    <div class='titulo animated slideInLeft'>
+
+<span >{{producto.nombre}}</span>
+
+
+  </div>
+
+<!-- 
+<div padding style='    margin-bottom: -16px;'>
+<ion-icon (click)='closeModal()'  style='font-size: 32px;
+    float: right;' name="close"></ion-icon>
+
+<h4  class='animated' style='font-family:"Comfortaa";line-height: 26px;'>{{producto.nombre}}</h4>
+
+
+
+<h6  style='font-family:"Comfortaa";line-height: 25px;'>{{producto.descripcion}}</h6>
+
+<h6 *ngIf='producto.precio!=producto.precio_descuento' style='font-family:"Comfortaa"'>Precio :  <span style='font-family: "M PLUS Rounded 1c";text-decoration:line-through;' >Antes S/.{{producto.precio*numero}}</span><span  style='font-family: "M PLUS Rounded 1c"; margin-left: 14px;' color='light'>Ahora S/.{{ahora}}</span>
+</h6> 
+
+<h6 *ngIf='producto.precio==producto.precio_descuento' style='font-family:"Comfortaa"'>Precio:<span  style='font-family: "M PLUS Rounded 1c";margin-left: 14px;'> S/.{{producto.precio*numero}}</span>
+</h6> 
+
+<h6 style='font-family: "M PLUS Rounded 1c"'>Duracion : {{producto.duracion_servicio}} min</h6>
+
+
+<ion-item >
+  <ion-label>Cuantas servicios deseas?</ion-label>
+  <ion-select [(ngModel)]="numero" interface="popover" (ionChange)="actualizaprecio(numero)">
+    <ion-option value="1">1</ion-option>
+    <ion-option value="2">2</ion-option>
+    <ion-option value="3">3</ion-option>
+    <ion-option value="4">4</ion-option>
+  </ion-select>
+</ion-item>
+
+
+</div> -->
+
+<ion-list>
+    <ion-item *ngFor = 'let s of producto.socias' (click)= 'escogersocia(s)' >
+    <ion-avatar item-start>
+      <img src='{{host}}{{s.socia__photo}}'>
+    </ion-avatar>
+    <h2 style='font-weight: bold;
+    color: #feab2c;'>{{s.socia__nombre}}</h2>
+      <h3>{{s.socia__descripcion_titulo}}</h3> 
+     <p style='
+    color: #feab2c;' *ngIf='s.socia__texperiencia'>{{s.socia__texperiencia}} de experiencia</p>
+    <p>{{s.socia__distrito__nombre}}</p>
+
+    <ion-avatar item-end style='text-align: center;'>
+
+      <span *ngFor="let element of s.estrellas">
+
+       <ion-icon *ngIf='element=="*"' color='secondary' name="star"></ion-icon>
+       <ion-icon *ngIf='element=="-"' color='secondary' name="star-outline"></ion-icon>
+
+
+      </span>
+
+      <h6 *ngIf='s.comentario.length>0' style='color:#feab2c'>{{s.comentario.length}} Comentario</h6>
+      <p *ngIf='s.comentario.length>0' >Ver Todos</p>
+
+    </ion-avatar>
+
+
+  </ion-item>
+  </ion-list>
+
+
+<!-- 
+ <ion-grid class='socia'>
+  <ion-row>
+    <ion-col>
+      <img class='animated flipInY' style='border-radius:50%;' src="{{host}}{{socia_detalle.socia__photo}}">
+
+    </ion-col>
+    <ion-col style='padding-top: 40px;text-align: center;'>
+      
+    <h2>{{socia_detalle.socia__nombre}}</h2>
+
+
+    <h6>{{socia_detalle.socia__descripcion_titulo}}</h6>
+
+    </ion-col>
+  </ion-row>
+
+
+
+<h6>{{socia_detalle.socia__descripcion_socia}}</h6>
+
+<h6>Tiempo experiencia: {{socia_detalle.socia__texperiencia}}</h6>
+
+
+</ion-grid> -->
+
+
+<!-- <div padding>
+<ion-grid>
+
+
+<h6>Puedes elegir una de nuestras socias </h6>
+
+
+  <ion-row>
+    <ion-col  [ngClass]="{'escogido':s.escogido==true}"  (click)= 'escogersocia(s)' col-4 style='text-align: center;padding: 15px;
+    border-radius: 6px;' *ngFor = 'let s of producto.socias' >
+
+
+      <img style='border-radius:50%;' src='{{host}}{{s.socia__photo}}'>
+      <p>{{s.socia__nombre}}</p>
+    </ion-col>
+
+  </ion-row>
+ 
+ </ion-grid>
+
+</div>
+
+
+ -->
+
+
+</ion-content>
+

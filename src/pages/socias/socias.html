@@ -1,0 +1,111 @@
+
+
+
+<ion-content padding >
+
+
+<ion-icon (click)='closeModal()'  style='font-size: 32px;
+    float: right;' name="close"></ion-icon>
+
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col col-12 style='padding: 60px;
+    padding-top: 0px;
+    padding-bottom: 0px;'>
+      <img class='animated bounceIn' style='border-radius:50%;' src="{{host}}{{socia_detalle.socia__photo}}">
+
+    </ion-col>
+    <ion-col col-12>
+
+          <span *ngFor="let element of socia_detalle.estrellas">
+
+       <ion-icon *ngIf='element=="*"' color='secondary' style='font-size:30px;' name="star"></ion-icon>
+       <ion-icon *ngIf='element=="-"' color='secondary' style='font-size:30px;' name="star-outline"></ion-icon>
+
+
+      </span>
+      
+		<h1>{{socia_detalle.socia__nombre}}</h1>
+
+
+		<h6>{{socia_detalle.socia__descripcion_titulo}}</h6>
+
+<p> {{socia_detalle.socia__texperiencia}} años de experiencia</p>
+
+<p> {{socia_detalle.socia__distrito__nombre}} </p>
+
+
+    </ion-col>
+  </ion-row>
+
+</ion-grid>
+
+<div >
+
+<h1>Descripcion</h1>
+<p>{{socia_detalle.socia__descripcion_socia}}</p>
+
+<h1>Comentarios</h1>
+  <ion-list>
+    <ion-item *ngFor = 'let c of socia_detalle.comentario'>
+    <ion-avatar item-start>
+      <img src="https://dzftds8z9s83c.cloudfront.net/profiles/avatars/production/1123547/medium/456614957034958ca7f3eb3e495bed6e1a4c3bce642bbc.jpeg">
+    </ion-avatar>
+    <h2>{{c.cliente__nombre}}</h2>
+<!--      <h3>S/. {{c.precio}}</h3> -->
+     <p>{{c.comentario}}</p>
+  </ion-item>
+  </ion-list>
+
+
+</div>
+
+
+<!-- 
+
+<h6>O tienes la opcion de escoger una de las socias</h6>
+
+<ion-grid>
+  <ion-row>
+    <ion-col  (click)= 'escogersocia(s)' col-4 *ngFor = 'let s of _socias' >
+      <img class='animated flipInY' style='border-radius:50%;' src='{{host}}{{s.socia__photo}}'>
+      <h5>{{s.socia__nombre}}</h5>
+    </ion-col>
+
+  </ion-row>
+ 
+ </ion-grid> -->
+
+
+</ion-content>
+  
+<ion-footer >
+  <ion-toolbar>
+    
+<ion-grid>
+    <ion-row>
+    
+    <ion-col><button ion-button round full style='background: #25d366;'><a style='width: 100%;color: #fff;
+    text-decoration: none;' href="https://api.whatsapp.com/send?phone={{socia_detalle.socia__telefono}}&text=Hola%20{{socia_detalle.socia__descripcion_titulo}}%20vi%20tu%20anuncio%20en%20COMTACTOS%20deseo%20mas%20informacion%20sobre%20el%20servicio">  <ion-icon name="logo-whatsapp" style='color: #fff; font-size: 15px;'></ion-icon></a></button>
+
+    </ion-col>
+
+    <ion-col>
+ <button ion-button round full color="light"><a style='text-decoration: none;color: #fff;width: 100%;' href="tel:+{{socia_detalle.socia__telefono}}">  <ion-icon name="call" style='color: #fff;font-size: 15px;'></ion-icon></a></button>
+
+    </ion-col>
+
+    <ion-col><button ion-button full round color="secondary"><a style='text-decoration: none;color: #fff;width: 100%;' href="mailto:{{socia_detalle.socia__email}}">  <ion-icon name="mail" style='color: #fff;font-size: 15px;'></ion-icon></a></button>
+  
+    </ion-col>
+
+    </ion-row>
+
+</ion-grid>
+
+  
+
+  </ion-toolbar>
+</ion-footer>

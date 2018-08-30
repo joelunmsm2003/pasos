@@ -1,0 +1,219 @@
+<ion-header >
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>{{cate.nombre}} </ion-title>
+
+
+         <ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            ' >{{book}}</ion-badge> 
+                            
+
+         <ion-buttons end>
+
+
+
+      <button end ion-button (click)="carritoModal()">
+        
+
+
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+    
+
+        
+
+
+    </ion-navbar>
+
+ 
+  </ion-header>
+
+
+<ion-content >
+
+
+    <img src="{{host}}{{cate.photo_home}}">
+
+    <div class='titulo animated slideInLeft'>
+
+<span >{{cate.nombre}}</span>
+
+
+  </div>
+<!-- 
+       <ul class="categorias-slider">
+
+
+          <li *ngFor = 'let c of categoria' (click)='traesubcategorias(c)'>
+		
+		<div *ngIf='c.check==true' (click)='reset(c);' style="
+    width:75px;
+    height: 61px;
+    padding: 0px;
+    padding-right: 16px;
+    font-size:12px;
+    margin-left: 21px;">
+		<img style='border-radius: 50%;' src='{{host}}{{c.icono}}'>
+
+		</div>
+
+      <div *ngIf='c.check==false'   style="
+    width:75px;
+    height: 61px;
+    padding: 0px;
+    padding-right: 16px;
+    font-size:12px;
+    margin-left: 21px;">
+    <img style='border-radius: 50%;' src='{{host}}{{c.icono_seleccionado}}'>
+
+    </div>
+
+          <span > {{c.nombre}} </span></li>
+
+
+
+         
+
+          </ul> -->
+
+
+
+<!-- 
+  <ion-card *ngFor="let item of subcategoria">
+    <img src="{{host}}{{item.photo}}">
+    <div class="card-title">{{item.nombre}} </div>
+    <div class="card-subtitle">S/. {{item.precio}}</div>
+  </ion-card> -->
+
+
+
+ <div>
+   
+   <ion-searchbar [(ngModel)]="searchTerm"  (click)='search(subcategoria)'
+
+ ></ion-searchbar>
+
+
+  <ion-list>
+    <ion-item *ngFor = 'let c of subcategoria' (click)='detalleModal(c)'>
+    <ion-avatar item-start>
+      <img src="{{host}}{{c.photo_icono}}">
+    </ion-avatar>
+    <h2>{{c.nombre}}</h2>
+<!--      <h3>S/. {{c.precio}}</h3> -->
+     <p>{{c.descripcion}}</p>
+  </ion-item>
+  </ion-list>
+
+ </div>
+<!-- 
+<ion-card  class='fadeIn' *ngFor="let item of subcategoria" >
+
+<button ion-button color='dark' style="position:absolute;right:12px;" ><span style='font-family: "M PLUS Rounded 1c";'> S/. {{item.precio_descuento.toFixed(2)}}</span></button>
+
+<span class='duracion'>{{item.duracion_servicio}} min</span>
+
+<div *ngIf="item.activar_descuento==true" class='descuento' style=""></div>
+  
+<span *ngIf="item.activar_descuento==true"  class='textdescuento'>{{item.descuento}}%</span>
+  
+  <img  (click)='detalleModal(item)'   style='border-radius: 17px;' src="{{host}}{{item.photo}}"/>
+
+
+</ion-card>
+
+  -->
+
+
+
+
+
+
+
+</ion-content>
+
+  
+<ion-footer *ngIf='book>0'>
+  <ion-toolbar>
+    
+<button class="animated  fadeInUp" ion-button full round color="light"  style='transition: none;
+     color:#222;' (click)='continuar()'>
+
+ <!-- 
+        <ion-col><ion-icon name="cart"></ion-icon></ion-col> -->
+
+        <ion-col><ion-badge  style='color: #232322;
+    background-color: #fff;
+    position: absolute;
+    font-size: 8px;
+    left: 55px;
+    top: 18px;
+    padding: 4px 6px;
+    '>{{book}}</ion-badge> <ion-icon  col-3 style='font-size: 29px;' name="cart"></ion-icon></ion-col>
+        
+        <ion-col col-6 center>PEDIR</ion-col>
+
+        <ion-col col-3><span style='margin-top: 4px;
+    position: absolute;
+    right: 23px;font-family: "M PLUS Rounded 1c";'>S/. {{precio.toFixed(2)}} </span><ion-icon style='font-size: 20px;float: right;' name="ios-arrow-forward"></ion-icon></ion-col>
+      
+     
+ 
+
+     </button> 
+
+  </ion-toolbar>
+</ion-footer>
+
+
+<style type="text/css">
+  
+  .active{
+-webkit-filter: grayscale(100%);  
+ filter: grayscale(100%); 
+    color:#fff;
+  }
+
+  .desactivo{
+
+    -webkit-filter: grayscale(0%);   
+ filter: grayscale(0%);
+
+
+  }
+
+  .textdescuento{
+        position: absolute;
+    padding: 5px;
+    color: #ffffff;
+    z-index: 1500;
+    font-family: 'Varela Round';
+    font-size: 12px;
+  }
+
+  .descuento{
+position: absolute;
+    z-index: 1000;
+    width: 0;
+    height: 0;
+    opacity: .9;
+    border-left: 54px solid #f75959;
+    border-top: 0px solid #f75959;
+    border-bottom: 44px solid transparent;
+
+}
+  
+</style>

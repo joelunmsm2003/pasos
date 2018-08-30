@@ -1,0 +1,25 @@
+<div  class="fixed44" *ngIf="nologeado">
+
+ <div class="tab_container">
+      <input id="tab1" type="radio" name="tabs" (click)='home()' >
+
+
+      <label [navPush]="introPage"  for="tab1"><ion-icon name="home"></ion-icon>
+      <span>Home</span></label>
+
+ 
+
+      <input id="tab2" type="radio" name="tabs" >
+      <label [navPush]="ayudaPage" for="tab2" ><ion-icon name="help"></ion-icon><span>Ayuda</span></label>
+
+      <input id="tab3" type="radio" name="tabs" >
+      <label (click)="shareSheetShare()" for="tab3"><ion-icon name="share"></ion-icon><span>Compartir</span></label>
+
+       <input id="tab4" type="radio" name="tabs" >
+      <label  (click)="loginprincipal()" for="tab4"><ion-icon name="log-in"></ion-icon><span>Ingresar</span></label>
+
+
+
+</div>
+
+</div>

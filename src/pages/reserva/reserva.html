@@ -1,0 +1,332 @@
+
+
+<!-- <ion-nav [root]="rootPage"></ion-nav>
+
+ -->
+
+<!-- 	<ion-list style='margin-top: 72px;
+    padding: 15px;'>
+
+
+<div class="row">
+<div class="col-30"><div class='circulo'>1</div></div>
+<div class="col-70" style='font-family: "Didact Gothic", sans-serif;padding: 9px;'>Que dia y aque hora quieres el servicio?</div>
+</div>
+
+  <ion-item>
+  <ion-label>Date</ion-label>
+  <ion-datetime displayFormat="MMM DD, YYYY HH:mm" [(ngModel)]="myDate"></ion-datetime>
+</ion-item>
+
+
+
+ <div class="spacer" style="height:20px;"></div>
+
+<div class="row">
+<div class="col-30"><div class='circulo'>1</div></div>
+<div class="col-70" style='font-family: "Didact Gothic", sans-serif;padding: 9px;'>En donde deseas el servicio?</div>
+</div>
+
+
+</ion-list> -->
+
+
+<ion-header>
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>Resumen </ion-title>
+
+
+           
+<ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            '>{{book}}</ion-badge> 
+                            
+
+  <ion-buttons end>
+      <button end ion-button (click)="carritoModal()">
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+    
+
+        
+
+
+    </ion-navbar>
+  </ion-header>
+
+
+
+<ion-content >
+
+
+
+
+<ion-list>
+
+
+  <ion-toolbar style='text-align: center;'>
+  
+<button ion-button round style='background: #25d366;'><a style='color: #fff;
+    text-decoration: none;' href="https://api.whatsapp.com/send?phone=51910759370&text=Hola%20soy%20{{nombre}}%20me%20gustaría%20reservar%20una%20cita%20para%20el%20{{dia}}%20a%20las%20{{hora}}%20{{todoservicio}}%20code:#%20{{codigo_servicio}}"> Whatsapp <ion-icon name="logo-whatsapp" style='color: #fff;'></ion-icon></a></button>
+
+
+  <button ion-button round color="light"><a style='text-decoration: none;color: #fff;' href="tel:+910759370"> Llamar <ion-icon name="call" style='color: #fff;'></ion-icon></a></button>
+  
+</ion-toolbar>
+
+<!-- <ion-item *ngIf='socia'>
+
+    <ion-thumbnail item-start>
+      <img style='border-radius:50%;' src="{{photo_socia}}">
+    </ion-thumbnail>
+
+
+
+    <button ion-button color="light" (click)='sociasModal(pedidos,_socia_detalle)'> Conoce a {{socia}} &nbsp; <ion-icon name="play"></ion-icon>   </button>
+
+
+</ion-item>
+ -->
+<ion-item >
+  
+   Codigo Servicio <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{codigo_servicio}}</span>
+
+</ion-item>
+
+<ion-item >
+  
+   Estado <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{estado}}</span>
+
+</ion-item>
+
+        
+
+  <ion-item ion-item *ngFor="let item of pedidos" (click)='detalleModal(item)'>
+
+     <ion-thumbnail item-start>
+      <img style='border-radius:50%;' src='{{host}}{{item.escogido.socia__photo}}'>
+    </ion-thumbnail>
+
+    <ion-row>
+
+      <h6>{{item.escogido.socia__nombre}}</h6>
+
+     <!--  
+    <button ion-button color="light" (click)='detalleModal(item)'>  {{item.escogido.socia__nombre}} &nbsp; <ion-icon name="play"></ion-icon>   </button>
+   --></ion-row>
+
+<!--     <ion-icon name="ios-remove-circle-outline" style='padding-right: 4px;' [hidden]="!item.muestradescripcion" (click)='item.muestradescripcion=false'></ion-icon>
+
+    <ion-icon name="ios-add-circle-outline" style='padding-right: 3px;' [hidden]="item.muestradescripcion" (click)='item.muestradescripcion=true'></ion-icon>
+ -->
+
+
+
+    <ion-row>
+
+    <span> {{item.cantidad}} {{item.nombre | slice:0:25}} </span>
+     </ion-row>
+    
+     <ion-row>
+       <span style='float: right;
+    margin-right: -30px;;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;
+'>S/. {{item.precio_descuento_item.toFixed(2)}}</span> 
+<!--      <ion-icon style='float:right;font-size: 21px;' name="trash"  (click)='quitacarrito(item)'></ion-icon>
+ -->    
+<!--       <p [hidden]="!item.muestradescripcion"  class='detallesubcategoria'> {{item.descripcion}}</p>
+ -->
+
+</ion-row>
+  </ion-item>
+
+
+
+
+
+<ion-item >
+  
+  <ion-icon name="cash"></ion-icon>
+   Total a pagar  <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;'>S/. {{precio}} </span>
+
+</ion-item>
+
+<ion-item *ngIf='precio_promo'>
+  
+  <ion-icon name="cash"></ion-icon>
+   Precio Promocional <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;'>S/. {{precio_promo}} </span>
+
+</ion-item>
+
+<ion-row>
+<ion-col col-10 style='padding: 0px;'><ion-item>
+<ion-label>Código promocional</ion-label>
+<ion-input  name="direccion"  type="text" [(ngModel)]="promo"  ></ion-input>
+</ion-item>
+</ion-col>
+<ion-col col-2 style='padding: 0px; text-align: center;'>
+<button  ion-button color="light" (click)='agregapromo(promo,codigo_servicio)'><ion-icon name="pricetag"></ion-icon></button>
+</ion-col>
+</ion-row>
+
+
+<ion-item *ngIf='precio_promo'>
+  
+  <ion-icon name="cash"></ion-icon>
+   Precio Promocional <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;'>S/. {{precio_promo.toFixed(2)}} </span>
+
+
+</ion-item>
+
+
+<ion-item >
+
+   
+  <ion-icon name="calendar" style='padding-right: 4px;' ></ion-icon><span> Fecha: </span>
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;'>{{dia}} </span>
+ 
+</ion-item>
+
+<ion-item>
+   
+   <ion-icon name="time" style='padding-right: 4px;'></ion-icon> <span>Hora: </span>
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;font-family: "M PLUS Rounded 1c" !important;'> {{hora_1}}</span>
+   
+</ion-item>
+
+
+
+
+
+
+
+
+
+<ion-item>
+<ion-label><ion-icon name="pin" style='padding-right: 3px;padding-top: 2px;'></ion-icon> Direccion</ion-label>
+<ion-textarea  name="promo"  type="text" [(ngModel)]="referencia"  ></ion-textarea>
+</ion-item>
+
+
+ <ion-item *ngIf='tipo'>
+   
+   Lugar
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{tipo}}</span>
+   
+</ion-item> 
+
+
+ <ion-item *ngIf='datolugar'>
+   
+   Nro
+
+   <span style='float: right;
+    margin-right: -30px;
+    position: absolute;
+    right: 48px;'> {{datolugar}}</span>
+   
+</ion-item> 
+
+<div style='height: 20px'></div>
+</ion-list>
+
+
+
+
+
+<!-- <button block ion-button color="white" round (click)='pagar()'>Pagar</button>
+ -->
+
+
+
+
+
+
+</ion-content> 
+
+
+<ion-footer>
+  <ion-toolbar style='text-align: center;'>
+  
+<button   ion-button round full color="light" round (click)='alertaPago()'>Pagar</button>
+
+
+<!-- 
+<button   ion-button color="light" round (click)='confirmapago()'>Pago en Efectivo</button>
+
+
+<button    ion-button color="dark" round >Pago Tarjeta</button>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col>
+    <img style='width: 112px;
+    height: 42px;
+    border-radius: 59px;' (click)='pagotulki()' src='assets/tunki.png'>
+
+    </ion-col>
+    <ion-col>
+      <img style='width: 112px;
+    height: 42px;
+    border-radius: 59px;' (click)='pagotarjetaToast()' src='assets/boton-yape.png'></ion-col>
+
+   
+  </ion-row>
+</ion-grid> -->
+
+
+
+
+<!--<button *ngIf='estado=="Confirmado"'   full ion-button color="dark" round (click)='pagar()'>Pagar </button>-->
+
+<!-- 
+<a href="https://mylookxpress.com/culqui.php?precio= S/. {{precio}}&fecha={{dia}}&hora={{hora}}&codigo={{codigo_servicio}}&email={{email}}&telefono={{telefono}}&nombre={{nombre}}&pedidos={{todoser}}">Paso variables saludo y texto a la página destino.php</a> -->
+
+
+  </ion-toolbar>
+</ion-footer>
+ 
+ 
+<!-- <mytabs></mytabs>
+ -->

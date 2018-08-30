@@ -1,0 +1,103 @@
+page-intro {
+
+
+
+h2{
+	font-size:14px;
+}
+
+#alert-input-0-0{
+
+background: url(https://drstonedds.com/wp-content/uploads/2017/07/What-Does-a-Prosthodontist-Specialize-In-530x354.jpg) no-repeat center center fixed;
+}
+
+
+#alert-input-0-1{
+
+background: url(https://i.kinja-img.com/gawker-media/image/upload/s--C-HE98Fg--/c_scale,fl_progressive,q_80,w_800/eibgv7kctah62iddzywm.jpg) no-repeat center center fixed;
+
+}
+
+.alert-md .alert-tappable {
+
+    min-height: 9.4rem !important;
+}
+
+
+
+.alert-md .alert-radio-label {
+
+    text-overflow: clip;
+  
+}
+
+.cat{
+
+  font-family: 'Varela Round', sans-serif;
+    position: absolute;
+    right: 33px;
+    color: #161512;
+    margin-top: -96px;
+    font-size: 29px;
+}
+
+.toast-message{
+
+	font-family: 'Varela Round', sans-serif;
+}
+
+.categoria{
+
+
+
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: 4px;
+    height: 90%;
+    width: 91%;
+    background: #234;
+    border-radius: 8px;
+    opacity: 0.4;
+    padding-top: 44px;
+
+    }
+
+    p{
+    font-family: 'Nunito';
+    font-size: 14px;
+    color: #fbfaf8;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    top: -6px;
+    height: 91%;
+    width: 91%;
+  
+    border-radius: 8px;
+
+    padding-top: 44px;
+
+    }
+
+}
+
+
+
+@keyframes fadeInAndSpin {
+ 
+    100% {
+        opacity: 1;
+        transform: rotate3d(1, 1, 0, 0deg);
+    }
+ 
+}
+ 
+@keyframes fadeIn {
+ 
+    100% {
+        opacity: 1;
+    }
+ 
+}

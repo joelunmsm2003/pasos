@@ -1,0 +1,110 @@
+<ion-header>
+    <ion-navbar color='dark'>
+
+  
+      <ion-title>Ingresar</ion-title>
+
+
+       <ion-buttons start="" (click)='cerrar()' class="bar-buttons bar-buttons-ios">
+      <button ion-button="" class="disable-hover bar-button bar-button-ios bar-button-default bar-button-default-ios"><span class="button-inner" >Cerrar</span><div class="button-effect"></div></button>
+    </ion-buttons>
+
+   
+
+
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content>
+
+
+
+
+
+          <div style='height: 20px'></div>
+    
+      <ion-list inset>
+
+
+  <!--Facebook Login-->
+
+<div padding>
+
+  <div *ngIf="isLoggedIn; else facebookLogin">
+   <!--  <h2>Hi, {{users.name}} ({{users.email}})</h2>
+    <p>
+      Gender: {{users.gender}}
+    </p>
+    <p>
+      <img src="{{users.picture.data.url}}" width="100" alt="{{users.name}}" />
+    </p> -->
+    <p>
+      <button ion-button full icon-right (click)="logout()">
+        Salir
+      </button>
+    </p>
+  </div>
+
+
+  <ng-template #facebookLogin>
+    <button ion-button full icon-right (click)="login()">
+      Ingresar con
+      <ion-icon name="logo-facebook"></ion-icon>
+    </button>
+  </ng-template>
+
+</div>
+
+
+
+  <form #loginForm="ngForm" (ngSubmit)="authenticate(model.username,model.password)" autocomplete="off">
+           <ion-list inset>
+
+
+          <div style='height: 20px'></div>
+
+
+          <label color='light'>Correo Electronico</label>
+          <ion-item>
+            <ion-input name="username" id="loginField" type="text" required [(ngModel)] = "model.username" #email></ion-input>
+          </ion-item>
+
+          <div style='height: 20px'></div>
+
+
+          <label color='light'>Password</label>
+          <ion-item>
+            <ion-input name="password" id="loginField" type="Password" required [(ngModel)] = "model.password"></ion-input>
+          </ion-item>
+        </ion-list>
+      
+    <ion-row>
+
+        <button  round ion-button class="submit-btn" color='dark' full type="submit" [disabled]="!loginForm.form.valid">Ingresar
+        </button>
+      
+    </ion-row>
+
+
+
+      <ion-row padding><span style='padding-top: 12px;' color='dark'  (click)='registra()'>No tienes cuenta registrate &nbsp;&nbsp;  AQUI</span></ion-row>
+  </form>
+ 
+
+
+<!--      <button round ion-button  color='dark' block  [navPush]="registrosociaPage" >Conviertete en socia</button>
+<p style='color:#fff;'>Version 0.1.9</p> -->
+
+         
+      </ion-list>
+
+
+      
+
+ 
+      
+
+
+</ion-content>
+

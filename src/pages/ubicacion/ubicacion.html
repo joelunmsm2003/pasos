@@ -1,0 +1,140 @@
+
+
+<ion-header>
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>Donde y cuando </ion-title>
+
+      
+<ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            '>{{book}}</ion-badge> 
+                            
+     
+      <ion-buttons end>
+      <button end ion-button (click)="carritoModal()">
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+
+    
+
+        
+
+
+    </ion-navbar>
+  </ion-header>
+
+
+
+<ion-content>
+
+ <ion-buttons float-end class="current-location">
+    <button ion-button icon-only (click)="currentLocation()">
+      <img src="./assets/icon/current-location.png" alt="">
+    </button>
+  </ion-buttons>
+
+  <ion-searchbar autocorrect="off" autocapitalize="off" spellcheck="off" #searchbar placeholder="Buscar" class="search-box"></ion-searchbar>
+
+  <div #map id="map" class="map"></div>
+  <div class="centerMarker"></div>
+  <!-- <div class="address-view">
+    <ion-list>
+      <ion-item no-lines class="help-text">
+        
+      </ion-item>
+       
+
+     
+    </ion-list>
+  </div> -->
+
+
+    
+
+          <ion-item>
+            <ion-label>Elige el día</ion-label>
+          
+           <ion-datetime name="dia"  style='font-family: "M PLUS Rounded 1c";' displayFormat="DDDD, D MMM  YYYY"  monthValues='2,3,4,5,6,7,8,9,10,11' cancelText='Cerrar' doneText='Aplicar'  [(ngModel)]="dia" max="2018-11-31" min='{{today}}'></ion-datetime>
+          </ion-item>
+
+
+          <ion-item>
+            <ion-label>A qué hora ?</ion-label>
+            <ion-datetime name="hora"  (click)='horarioservicio()' displayFormat="hh:mm a"  cancelText='Cerrar' pickerFormat="hh:mm a"  doneText='Aplicar' [(ngModel)]="hora" hourValues="01,02,03,04,05,06,07,08,09,10,11,12,13,14,15,16,17,18,19,21,22,23,24 "></ion-datetime>
+          </ion-item>
+
+          
+          <ion-item>
+           <ion-label>Dirección</ion-label>
+            <ion-textarea [attr.rows]="2" name="direccion"  type="text" [(ngModel)]="referencia"  ></ion-textarea>
+          </ion-item>
+
+
+          <ion-row>
+
+          <ion-col col-8 style='padding: 0px;'>
+           <ion-item>
+
+          <ion-label>Lugar</ion-label>
+          <ion-select name="tipo"  [(ngModel)]="tipo" interface="popover">
+            <ion-option value="casa">Casa</ion-option>
+            <ion-option value="departamento">Dpto</ion-option>
+            <ion-option value="oficina">Oficina</ion-option>
+          </ion-select>
+
+
+
+          <!-- <ion-input *ngIf='datolugar' type='number' placecolder='Nro'></ion-input>
+ -->
+      
+          </ion-item>
+
+          </ion-col>
+
+          <ion-col col-4  style='padding: 0px;'>
+
+            <ion-item>
+
+          <ion-input  name='datolugar' [(ngModel)]="datolugar" type='text' placeholder='Nro'></ion-input>
+
+        </ion-item>
+ 
+          </ion-col>
+
+         </ion-row>
+ 
+
+      
+
+
+  
+
+</ion-content>
+
+
+
+<ion-footer>
+  <ion-toolbar>
+<button  ion-button  block round color="light"  (click)='reserva(dia,hora,ubicacion,referencia,tipo,datolugar)'    >Continuar</button>
+
+  </ion-toolbar>
+</ion-footer>
+
+
+<!-- 
+
+<mytabs></mytabs>
+ -->

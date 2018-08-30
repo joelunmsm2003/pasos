@@ -1,0 +1,99 @@
+{
+  "name": "myApp",
+  "version": "0.0.1",
+  "author": "Ionic Framework",
+  "homepage": "http://ionicframework.com/",
+  "private": true,
+  "scripts": {
+    "clean": "ionic-app-scripts clean",
+    "build": "ionic-app-scripts build",
+    "lint": "ionic-app-scripts lint",
+    "ionic:build": "ionic-app-scripts build",
+    "ionic:serve": "ionic-app-scripts serve"
+  },
+  "dependencies": {
+    "@angular/common": "5.0.0",
+    "@angular/compiler": "5.0.0",
+    "@angular/compiler-cli": "5.0.0",
+    "@angular/core": "5.0.0",
+    "@angular/forms": "5.0.0",
+    "@angular/http": "5.0.0",
+    "@angular/platform-browser": "5.0.0",
+    "@angular/platform-browser-dynamic": "5.0.0",
+    "@ionic-native/clipboard": "^4.9.0",
+    "@ionic-native/core": "4.3.2",
+    "@ionic-native/device": "^4.6.0",
+    "@ionic-native/facebook": "^4.8.0",
+    "@ionic-native/geolocation": "^4.5.2",
+    "@ionic-native/google-maps": "^4.5.2",
+    "@ionic-native/in-app-purchase": "^4.5.2",
+    "@ionic-native/keyboard": "^4.9.2",
+    "@ionic-native/onesignal": "^4.5.2",
+    "@ionic-native/sim": "^4.7.0",
+    "@ionic-native/social-sharing": "^4.5.2",
+    "@ionic-native/splash-screen": "4.3.2",
+    "@ionic-native/status-bar": "4.3.2",
+    "@ionic/storage": "^2.1.3",
+    "@ngx-translate/core": "^10.0.2",
+    "@ngx-translate/http-loader": "^2.0.1",
+    "angular2-jwt": "^0.2.3",
+    "angular4-social-login": "^1.1.1",
+    "cordova-android": "6.4.0",
+    "cordova-clipboard": "^1.2.1",
+    "cordova-ios": "4.5.4",
+    "cordova-plugin-device": "^1.1.4",
+    "cordova-plugin-facebook4": "~1.9.1",
+    "cordova-plugin-geolocation": "^4.0.1",
+    "cordova-plugin-googlemaps": "^2.1.1",
+    "cordova-plugin-googlemaps-sdk": "git+https://github.com/mapsplugin/cordova-plugin-googlemaps-sdk.git",
+    "cordova-plugin-ionic-webview": "^1.1.16",
+    "cordova-plugin-splashscreen": "^4.0.3",
+    "cordova-plugin-whitelist": "^1.3.1",
+    "cordova-plugin-x-socialsharing": "^5.2.1",
+    "es6-promise-plugin": "^4.1.0",
+    "ionic-angular": "nightly",
+    "ionic-plugin-keyboard": "^2.2.1",
+    "ionicons": "3.0.0",
+    "jquery": "^3.3.1",
+    "minimist": "^1.2.0",
+    "moment": "^2.22.2",
+    "onesignal-cordova-plugin": "^2.2.5",
+    "raven-js": "^3.26.3",
+    "rxjs": "5.5.2",
+    "sw-toolbox": "3.6.0",
+    "xml2js": "^0.4.19",
+    "zone.js": "0.8.18"
+  },
+  "devDependencies": {
+    "@ionic/app-scripts": "^3.1.8",
+    "@types/googlemaps": "^3.30.10",
+    "typescript": "2.4.2"
+  },
+  "description": "An Ionic project",
+  "cordova": {
+    "plugins": {
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_IOS": "AIzaSyClmE8wtji8TfOH757o8VCspFHUzhMrjAo",
+        "API_KEY_FOR_ANDROID": "AIzaSyCopEqGky81dhV56krJ1dqjkqFPKKOpOrI",
+        "LOCATION_WHEN_IN_USE_DESCRIPTION": "Requerimos tu ubicación para poder atenderte, y brindarte un mejor servicip",
+        "LOCATION_ALWAYS_USAGE_DESCRIPTION": "Requerimos tu ubicación para poder atenderte, y brindarte un mejor servicio"
+      },
+      "ionic-plugin-keyboard": {},
+      "cordova-plugin-whitelist": {},
+      "cordova-plugin-device": {},
+      "cordova-plugin-splashscreen": {},
+      "cordova-plugin-ionic-webview": {},
+      "onesignal-cordova-plugin": {},
+      "cordova-plugin-geolocation": {},
+      "cordova-plugin-x-socialsharing": {},
+      "cordova-plugin-facebook4": {
+        "APP_ID": "2095454767354495",
+        "APP_NAME": "My Look Xpress"
+      },
+      "cordova-clipboard": {}
+    },
+    "platforms": [
+      "android"
+    ]
+  }
+}

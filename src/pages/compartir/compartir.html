@@ -1,0 +1,62 @@
+<!--
+  Generated template for the CompartirPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+ <ion-header>
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+      <ion-title>Invitación</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+
+
+
+
+<h2>¿Quieres 5 soles?</h2>
+
+
+<p>Obtén y regala 5 soles de descuento cuando invites a un amigo (a) a probar my look xpress</p>
+
+
+
+<div style='height: 10px;'></div>
+
+<img style='border-radius: 15px;' src="https://img2.topsante.com/var/topsante/storage/images/1/3/1/4/1314105/les-reseaux-sociaux-nuisent-bien-etre_exact540x405_l.jpg">
+
+
+ 
+<div style='height: 10px;'></div>
+
+ <label>Comparte tu codigo de invitacion</label>
+
+ 
+
+
+ <button full  color='dark' round ion-button icon-end (click)="copiar(codigo_compartir)">
+
+  {{codigo_compartir}}
+</button>
+
+
+<div style='height: 10px;'></div>
+ 
+
+
+<button full round ion-button (click)="shareSheetShare()" block round color="light">Invita a amigos</button> 
+
+
+<!-- <button ion-button block round color="light"><a style='color: #000;
+    text-decoration: none;' href="https://api.whatsapp.com/send?text=Comparte%20la%20aplicacion%20con%20el%20codigo%20%{{codigo_compartir}}y%20recibe%20un%20servicio%20gratis%20https://play.google.com/store/apps/details?id=io.codigito.mylookexpress&hl=es"> Compartir <ion-icon name="logo-whatsapp" style='color: #000;'></ion-icon></a></button>-->
+
+
+
+
+</ion-content>

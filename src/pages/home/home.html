@@ -1,0 +1,118 @@
+ <ion-menu persistent="true" [content]="content" side="left" >
+ 
+  
+
+
+  <ion-toolbar color='dark' >
+    <ion-title>Menu </ion-title>
+
+
+
+
+    
+
+  </ion-toolbar>
+ 
+  <ion-content class='menu' color='dark' >
+
+   <ion-list >
+  
+         <!--  <button ion-item>
+        
+      </button>
+ -->
+
+    </ion-list> 
+
+    <!-- <ion-list *ngIf="logeado==false" style='padding-top:37px;'>
+
+
+      
+ 
+
+   
+  
+
+      <button ion-item *ngFor="let p of pagesnologeado" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+
+      <button ion-item (click)="video()">
+        Video
+      </button>
+
+      <button ion-item (click)="iralogin()">
+      Ingresar
+    </button>
+
+       <button ion-item (click)="sacasexo()">
+        Escoge tu género 
+      </button>
+
+       <a ion-item style='
+    text-decoration: none;' href="https://api.whatsapp.com/send?phone=51910759370&text=Hola"> Contáctenos <ion-icon name="logo-whatsapp" style='color: #25d366;float:right;'></ion-icon></a>
+
+    <a ion-item style='text-decoration: none;' href="tel:+910759370"> Llamanos <ion-icon name="call" style='color: #000;float:right;'></ion-icon></a>
+
+
+    </ion-list>
+ -->
+  
+    <ion-list  style='padding-top:37px;'>
+
+    
+      
+   
+  
+      
+      
+       <button ion-item *ngFor="let p of pageslogeado" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+
+
+
+   
+
+ <a ion-item style='
+    text-decoration: none;' href='#' (click)="sacasexo()"> Escoge tu género  <img style='width: 24px;
+    float: right;'src="assets/icono-menu.png"></a>
+
+
+
+      <a ion-item style='
+    text-decoration: none;' href="https://api.whatsapp.com/send?phone=51910759370&text=Hola"> Contáctenos <ion-icon name="logo-whatsapp" style='color: #25d366;float:right;'></ion-icon></a>
+
+    <a ion-item style='text-decoration: none;' href="tel:+910759370"> Llamanos <ion-icon name="call" style='color: #000;float:right;'></ion-icon></a>
+
+<button  ion-item (click)="salir()">
+        Salir
+      </button>
+
+    </ion-list>
+
+<ion-list >
+  
+          
+
+      
+    </ion-list>
+
+    
+
+   
+
+      
+
+
+  
+
+
+  </ion-content>
+ 
+</ion-menu>
+
+
+
+<ion-nav id="nav" [root]="xxxPage" #content swipe-back-enabled="true"></ion-nav>
+ 

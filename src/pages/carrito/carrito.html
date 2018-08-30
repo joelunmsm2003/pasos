@@ -1,0 +1,64 @@
+<!--
+  Generated template for the CarritoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color='dark'>
+
+      
+    <ion-title>Carrito</ion-title>
+
+    <ion-buttons end>
+      <button ion-button icon-only (click)="closeModal()">
+        <ion-icon name="close"></ion-icon>
+      </button>
+    </ion-buttons>
+
+
+  </ion-navbar>
+
+
+
+    
+
+
+
+</ion-header>
+
+
+<ion-content >
+
+   
+
+<ion-item-sliding *ngFor="let item of pedido">
+
+    
+
+    <button ion-item>
+
+    <ion-icon name="trash" item-end (click)="quitacarrito(item)"></ion-icon>
+  <span *ngIf='item.cantidad>1'>{{item.cantidad}}</span>  {{item.nombre | slice:0:25}}.
+      
+ <span style='float:right; font-family: "M PLUS Rounded 1c";'>S/. {{item.precio_descuento_item.toFixed(2)}}</span>
+  </button>
+ 
+ 
+  </ion-item-sliding>
+
+     <button *ngIf='precio>0' ion-item>
+
+      Precio Total
+ <span style='float:right; font-family: "M PLUS Rounded 1c"'  >S/. {{precio.toFixed(2)}}</span>
+  </button>
+
+
+    
+<div padding>
+<button *ngIf="pedido.length>0" class="animated  fadeInUp" ion-button full round  style='transition: none;
+    background: #aadeda; color:#000; ' (click)='continuar()'>Pedir</button>
+</div>
+
+</ion-content>

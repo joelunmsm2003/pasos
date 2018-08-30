@@ -1,0 +1,50 @@
+<!--
+  Generated template for the SearchPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-navbar color='dark'>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+
+
+      <ion-title>Comtactos </ion-title>
+
+         <ion-badge (click)="carritoModal()" *ngIf='book>0' style='color: #232322;
+                            background-color: #aadeda;
+                            position: absolute;
+                            font-size: 8px;
+                            right: 5px;
+                            top: 25px;
+                            padding: 4px 6px;
+                            z-index:2000;
+                            '>{{book}}</ion-badge> 
+                            
+
+        <ion-buttons end>
+      <button *ngIf='book>0' end ion-button (click)="carritoModal()">
+        <ion-icon style='font-size: 2.2em;' name="cart"></ion-icon>
+      </button>
+    </ion-buttons> 
+
+
+    </ion-navbar>
+  </ion-header>
+<ion-content>
+  <ion-searchbar [(ngModel)]="searchTerm"  (ionInput)="buscador(searchTerm)"
+ ></ion-searchbar>
+  <ion-list>
+    <ion-item *ngFor = 'let c of _subcategorias' (click)='detalleModal(c)'>
+    <ion-avatar item-start>
+      <img src="{{host}}{{c.photo_icono}}">
+    </ion-avatar>
+    <h2>{{c.nombre}}</h2>
+ <!--     <h3>S/. {{c.precio}}</h3>
+  -->    <p>{{c.descripcion}}</p>
+  </ion-item>
+  </ion-list>
+
+</ion-content>
